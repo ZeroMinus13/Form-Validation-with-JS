@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  gap: 5px;
+  padding: 20px;
+}
+label {
+  display: block;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+}
+
+input:valid {
+  border: 2px solid rgb(30, 121, 30);
+}
+
+input:focus {
+  outline: none;
+}
+
+input:valid + span::before {
+  content: '✓';
+  color: green;
+}
+button {
+  display: block;
+  padding: 10px;
+  width: 150px;
+}
+
+.errorText {
+  width: 400px;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+}
+.activeerror {
+  border: 2px solid red !important;
+}
+.activeerror + span::before {
+  content: '✖' !important;
+  color: red !important;
+}
+.error:invalid {
+  border: 2px solid red;
+}
+.error + span::before {
+  content: '✖';
+  color: red;
+}

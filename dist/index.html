@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>Form Validation</h1>
+    <form id="form" novalidate>
+      <div class="inputs">
+        <label for="email">E-mail*</label>
+        <div class="errorText" aria-live="polite"></div>
+        <input type="email" id="email" autocomplete="email" required />
+        <span></span>
+      </div>
+      <div class="inputs">
+        <label for="country">Country*</label>
+        <div class="errorText" aria-live="polite"></div>
+        <input type="text" name="country" id="country" pattern="[A-Za-z]+" required />
+        <span></span>
+      </div>
+      <div class="inputs">
+        <label for="zipcode">Zip Code*</label>
+        <div class="errorText" aria-live="polite"></div>
+        <input
+          type="text"
+          name="zipcode"
+          id="zipcode"
+          pattern="[0-9]*"
+          minlength="5"
+          maxlength="5"
+          required
+        />
+        <span></span>
+      </div>
+      <div class="inputs">
+        <label for="password">Password*</label>
+        <div class="errorText" aria-live="polite"></div>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          autocomplete="current-password"
+          minlength="6"
+          required
+        />
+        <span></span>
+      </div>
+      <div class="inputs">
+        <label for="passwordConfirm">Confirm Password*</label>
+        <div class="errorText" aria-live="polite"></div>
+        <input
+          type="password"
+          name="passwordConfirm"
+          id="passwordConfirm"
+          autocomplete="current-password"
+          minlength="6"
+          required
+        />
+        <span></span>
+      </div>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
